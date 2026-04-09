@@ -33,7 +33,7 @@ public class Emp extends JFrame implements ActionListener{
         float esal=Float.parseFloat(t3.getText());
         try{
             Class.forName("org.postgresql.Driver");
-            Connection c=DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgreuser");
+            Connection c=DriverManager.getConnection(url,user,password);
            
             PreparedStatement p=c.prepareStatement("insert into employee values(?,?,?)");
             p.setInt(1,eno);
