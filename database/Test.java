@@ -7,9 +7,7 @@ public class Test{
             Class.forName("org.postgresql.Driver");
 
             Connection con = DriverManager.getConnection(
-                "jdbc:postgresql://localhost:5432/pguser",
-                "postgres",
-                "postgreuser"
+                url,username,password
             );
 
             System.out.println("Connected successfully!");
