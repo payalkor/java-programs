@@ -28,7 +28,7 @@ public class ddl extends JFrame implements ActionListener {
               //Class.forName("org.postgresql.Driver");
               Class.forName("org.postgresql.Driver");
               System.out.println("load");
-              c=DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgreuser");
+              c=DriverManager.getConnection(url,username,password);
               System.out.println("error"+c);
               s=c.createStatement();
             }catch(Exception e){
