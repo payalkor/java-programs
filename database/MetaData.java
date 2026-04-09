@@ -4,7 +4,7 @@ public class MetaData {
     public static void main(String[] args) {
     try{
           Class.forName("org.postgresql.Driver");
-          Connection c=DriverManager.getConnection("jdbc:postgresql://localhost:5432/pguser","postgres","postgreuser");
+          Connection c=DriverManager.getConnection(url,username,password);
           DatabaseMetaData db=c.getMetaData();
           System.out.println("Product name : "+db.getDatabaseProductName());
           System.out.println("Product Version:"+db.getDatabaseProductVersion());
